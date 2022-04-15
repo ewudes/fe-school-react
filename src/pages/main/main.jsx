@@ -7,7 +7,7 @@ import { AppRoute } from '../../const.js';
 const Main = () => {
   return (
     <>
-      <Header mode={AppRoute.MAIN}/>
+      <Header kek={AppRoute.MAIN}/>
       <section className="main__wrapper">
         <Filter />
         <Board />
