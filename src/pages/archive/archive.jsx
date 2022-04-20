@@ -1,27 +1,19 @@
 import React from 'react';
 import Board from '../../components/board/board';
 import Header from '../../components/header/header';
-import { AppRoute } from '../../const';
-// import { useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
-const Archive = (props) => {
-  // console.log('props', props)
+const Archive = ({events}) => {
 
-  const { id } = props.match.params;
-  // const { id } = useParams();
+  const { pathname } = useLocation();
 
-  const kek = () => {
-    return id ? `ID есть, вот он - ${id}` : 'Нет ID никакого'
-  }
-
-  console.log('id', id)
+  const archiveEvents = events.filter(x => x.archive);
 
   return (
     <>
-      <Header mode={AppRoute.ARCHIVE}/>
+      <Header mode={pathname}/>
       <section className="main__wrapper">
-        <div>{kek()}</div>
-        <Board />
+        <Board events={archiveEvents}/>
       </section>
     </>
   )
