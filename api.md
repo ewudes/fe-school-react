@@ -37,3 +37,6 @@
 ```
 
 </details>
+
+## Delete archive events ##
+**DELETE** `https://fe-school-api.herokuapp.com/api/events/archive/delete`
