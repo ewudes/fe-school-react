@@ -4,15 +4,16 @@ import Main from '../../pages/main/main';
 import Archive from '../../pages/archive/archive';
 import { AppRoute } from '../../const';
 
-const App = ({events}) => {
+const App = () => {
+
   return (
     <BrowserRouter>
       <Switch>
         <Route path="/" exact>
-          <Main events={events}/>
+          <Main />
         </Route>
         <Route path={AppRoute.ARCHIVE} exact>
-          <Archive events={events}/>
+          <Archive />
         </Route>
         <Route path={AppRoute.EVENT}>
           {/* Страница добавления/редактирования */}
